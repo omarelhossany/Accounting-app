@@ -1,0 +1,18 @@
+:root{
+    --background-color: #fff;
+    --radius: 5px;
+    --padding: 10px;
+}
+
+h1{
+    text-align: center;
+    border-radius: var(--radius);
+    background-color: #dadada;
+    color: var(--background-color);
+    margin: 0;
+    padding: var(--padding);
+}
+body{
+    background-color: var(--background-color);
+    font-family: Arial, sans-serif;
+}
