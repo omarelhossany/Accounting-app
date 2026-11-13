@@ -1,7 +1,7 @@
 :root{
     --background-header: #d8d8d8;
     --background-hgroup: #9b9b9b;
-    --background-main-container: #e2c5c5;
+    --background-main-container: #a8ffeb;
     --radius: 5px;
     --padding: 10px;
 }
@@ -14,15 +14,34 @@ h1{
     margin: 0;
     padding: var(--padding);
 }
+th{
+    border: 1px solid #ffffff;
+}
 body{
     background-color: var(--background-color);
     font-family: Arial, sans-serif;
     font-size: 1.5rem;
 }
+*{
+    box-sizing: border-box;
+    border-radius: var(--radius);
+}
+
 input, select, textarea{
     font-size: 1.2rem;
     padding: var(--padding);
 }
+footer{
+    display: flex;
+    justify-content: right;
+    background-color: var(--background-hgroup);
+    padding: var(--padding);
+    position: absolute;
+    bottom: 0px;
+    width: calc(100% - 32px);
+
+}
+
 table{
     border-collapse: collapse;
     width: calc(80%);
@@ -40,9 +59,10 @@ hgroup, header, .main-container{
 .main-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-end;
     background-color: var(--background-main-container);
+    overflow-y: auto;
+    max-height: calc(100vh - 12em);
 }
 hgroup {
   display: flex;
@@ -61,10 +81,13 @@ header {
 
 }
 button{
-    width: 1.5em;
     height: 1.5em;
     font-size: 2em;
     margin: 5px;
+}
+.sqr{
+    width: 1.5em;
+
 }
 .lined{
     display:inline-block
@@ -73,4 +96,22 @@ button{
     display: flex;
     margin: var(--padding);
     align-items: center;
+}
+.side-child{
+    display: flex;
+    flex-direction: column;
+    margin: var(--padding);
+    align-items: center;
+    background-color: var(--background-hgroup);
+}
+.side-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: var(--background-header);
+}
+.flstart{
+    position: absolute;
+    left: 0px;
 }
