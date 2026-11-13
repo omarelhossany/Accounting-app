@@ -8,7 +8,69 @@
 </head>
 
 <body>
-    <h1>قيد اليومية</h1>
+    <hgroup>
+        <button> طبع </button>
+        <h1 class="lined">قيد اليومية</h1>
+        <button class="navigator-btn"> ▶ </button>
+    </hgroup>
+    <header>
+        <select class = "daily flChild">
+            <option value="option1">الخيار 1</option>
+            <option value="option2">الخيار 2</option>
+            <option value="option3">الخيار 3</option>
+        </select>
+        <input type="date" class="flChild"></input>
+        <div class="lined flChild"> 
+            <span class="log-number"> 1000 </span>
+            <span> &nbsp; رقم القيد </span>
+        </div>
+
+    </header>
+
+        <main class="main-container">
+            <section class="flChild">
+                <input type="text" id="log-info">
+                <label for="log-info"> &nbsp; بيان القيد </label>
+            </section>
+
+            <section class="flChild">
+                <input type="text" id="notes">
+                <label for="notes"> &nbsp; ملاحظات </label>
+            </section>
+            <table>
+                <button> - </button>
+                <button> + </button>
+                <thead>
+                    <tr>
+                        <th> ملاحظات </th>
+                        <th> دائن </th>
+                        <th> مدين </th>
+                        <th> البيان </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                </tbody>
+
+        </main>
+
 </body>
 
 </html>

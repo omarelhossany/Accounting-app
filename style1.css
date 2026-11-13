@@ -1,5 +1,7 @@
 :root{
-    --background-color: #fff;
+    --background-header: #d8d8d8;
+    --background-hgroup: #9b9b9b;
+    --background-main-container: #e2c5c5;
     --radius: 5px;
     --padding: 10px;
 }
@@ -15,4 +17,60 @@ h1{
 body{
     background-color: var(--background-color);
     font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+}
+input, select, textarea{
+    font-size: 1.2rem;
+    padding: var(--padding);
+}
+table{
+    border-collapse: collapse;
+    width: calc(80%);
+    margin: 5px;
+}
+thead{
+    background-color: var(--background-hgroup);
+    margin-top: 5px;
+}
+
+hgroup, header, .main-container{
+    width: calc(100% - 16px);
+    margin: 5px;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: var(--background-main-container);
+}
+hgroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--background-hgroup);
+
+}
+header {
+  display: flex;
+  flex-direction: row;
+  height: 3em;
+  justify-content: space-around;
+  background-color: var(--background-header);
+
+}
+button{
+    width: 1.5em;
+    height: 1.5em;
+    font-size: 2em;
+    margin: 5px;
+}
+.lined{
+    display:inline-block
+}
+.flChild{
+    display: flex;
+    margin: var(--padding);
+    align-items: center;
 }
