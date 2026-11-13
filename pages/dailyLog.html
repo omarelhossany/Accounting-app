@@ -1,46 +1,85 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web Page</title>
     <link rel="stylesheet" href="../style1.css">
+    <script>
+        function addRow(a) {
+            const table = document.querySelector(a);
+            table.insertAdjacentHTML('beforeend',
+                `<tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                `)
+        }
+
+        function removeRow(a) {
+            const table = document.querySelector(a);
+            if (table.rows.length > 1) {
+                table.removeChild(table.lastElementChild);
+            }
+        }
+        function openSearch() {
+            const body = document.querySelector('body');
+            body.insertAdjacentHTML('afterbegin', 
+            `
+                <div style="position: absolute; top:25%; left:25%; backdrop-filter: blur(10px); border: 1px solid #000; padding: 20px; z-index: 1000;">
+                    <button> OK </button>
+                    <input type="text" placeholder="بحث">
+                    <div> 1 </div>
+                    <div> 2 </div>
+                    <div> 3 </div>
+                </div>
+            `
+            );
+        }
+
+    </script>
 </head>
 
 <body>
     <hgroup>
         <button> طبع </button>
-        <h1 class="lined">قيد اليومية</h1>
-        <button class="navigator-btn"> ▶ </button>
+        <h1 class="lined"> قيد اليومية </h1>
+        <button class="navigator-btn sqr"> ▶ </button>
     </hgroup>
     <header>
-        <select class = "daily flChild">
+        <select class="daily flChild">
             <option value="option1">الخيار 1</option>
             <option value="option2">الخيار 2</option>
             <option value="option3">الخيار 3</option>
         </select>
         <input type="date" class="flChild"></input>
-        <div class="lined flChild"> 
+        <div class="lined flChild">
             <span class="log-number"> 1000 </span>
             <span> &nbsp; رقم القيد </span>
         </div>
 
     </header>
 
-        <main class="main-container">
-            <section class="flChild">
-                <input type="text" id="log-info">
-                <label for="log-info"> &nbsp; بيان القيد </label>
-            </section>
+    <main class="main-container">
+        <section class="flChild">
+            <input type="text" id="log-info">
+            <label for="log-info"> &nbsp; بيان القيد </label>
+        </section>
 
-            <section class="flChild">
-                <input type="text" id="notes">
-                <label for="notes"> &nbsp; ملاحظات </label>
-            </section>
-            <table>
-                <section
-                <button> - </button>
-                <button> + </button>
+        <section class="flChild">
+            <input type="text" id="notes">
+            <label for="notes"> &nbsp; ملاحظات </label>
+        </section>
+
+        <section class="side-container">
+            <div class="side-child">
+                <button onclick="removeRow('#daily-log-table')" class="sqr"> - </button>
+                <button onclick="addRow('#daily-log-table')" class="sqr"> + </button>
+                <button class="sqr" onclick="openSearch()"> 🔍 </button>
+            </div>
+            <table style="display: inline-block;"> <!-- remove this inline style!!-->
                 <thead>
                     <tr>
                         <th> ملاحظات </th>
@@ -49,7 +88,7 @@
                         <th> البيان </th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="daily-log-table">
                     <tr>
                         <td><input type="text"></td>
                         <td><input type="text"></td>
@@ -69,8 +108,15 @@
                         <td><input type="text"></td>
                     </tr>
                 </tbody>
+            </table>
+        </section>
 
-        </main>
+    </main>
+    <footer>
+        <button class="flStart"> حفظ </button>
+        <button> حذف قيد </button>
+        <button> إضافة قيد </button>
+    </footer>
 
 </body>
 
