@@ -9,6 +9,11 @@
         <style>
             * {box-sizing: border-box;}
             ul {list-style-type: none;}
+            .container{
+                display: flex;
+                justify-content: space-around; /* Distributes extra space evenly */
+                width: 100%;
+            }
 
             .month {
             padding: 70px 25px;
@@ -86,68 +91,80 @@
         
     </head>
 
-    <body>
-        <main>
-            <h1 style="text-align: center; background-color: black;"> الصفحة الرئيسية </h1>
+    <body >
+        <header style="height: 12vh;">
+            <h1 style="text-align: center; background-color: black; margin-bottom: 5vh;"> الصفحة الرئيسية </h1>
+        </header>
+        <div class="container">
+            <main style="height: 90vh; width:48vw;">
+                
+                <div class="container" >
+                    <a class="btn" href="pages/dailyLog.html" style="font-size:20px;"> قيد اليومية </a>
+                    <a class="btn" href="pages/codeTree.html" style="font-size:20px;"> صفحة التكويد </a>
+                </div>
+                
 
-            <a class="btn" href="pages/dailyLog.html" style="font-size:20px;"> قيد اليومية </a>
-            <a class="btn" href="pages/codeTree.html" style="font-size:20px;"> صفحة التكويد </a>
-            <section style="width: 50vw; height: 25vh;">
-                <!--Calender area-->
-                <div class="month">      
-                    <ul>
-                        <li>
-                        August<br>
-                        <span style="font-size:18px">2021</span>
-                        </li>
+                <section style="width: 45 vw; height: 25vh; margin-top: 5vh; ">
+                    <!--Calender area-->
+                    <div class="month">      
+                        <ul>
+                            <li>
+                            August<br>
+                            <span style="font-size:18px">2021</span>
+                            </li>
+                        </ul>
+                        </div>
+                    <div>
+                    <ul class="weekdays">
+                        <li>Su</li>
+                        <li>Mo</li>
+                        <li>Tu</li>
+                        <li>We</li>
+                        <li>Th</li>
+                        <li>Fr</li>
+                        <li>Sa</li>
                     </ul>
-                    </div>
-                <div>
-                <ul class="weekdays">
-                    <li>Su</li>
-                    <li>Mo</li>
-                    <li>Tu</li>
-                    <li>We</li>
-                    <li>Th</li>
-                    <li>Fr</li>
-                    <li>Sa</li>
-                </ul>
 
-                <ul class="days">  
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                    <li>8</li>
-                    <li>9</li>
-                    <li><span class="active">10</span></li>
-                    <li>11</li>
-                    <li>12</li>
-                    <li>13</li>
-                    <li>14</li>
-                    <li>15</li>
-                    <li>16</li>
-                    <li>17</li>
-                    <li>18</li>
-                    <li>19</li>
-                    <li>20</li>
-                    <li>21</li>
-                    <li>22</li>
-                    <li>23</li>
-                    <li>24</li>
-                    <li>25</li>
-                    <li>26</li>
-                    <li>27</li>
-                    <li>28</li>
-                    <li>29</li>
-                    <li>30</li>
-                    <li>31</li>
-                </ul>
-            </section>
-        </main>
+                    <ul class="days">  
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li><span class="active">10</span></li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                    </ul>
+                </section>
+
+            </main>
+            <aside style="height: 90vh; width:48vw;">
+                
+            </aside>
+        </div>
     </body>
 
 </html>
