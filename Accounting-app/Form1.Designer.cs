@@ -32,7 +32,8 @@
             label1 = new Label();
             label2 = new Label();
             navigator = new Panel();
-            journalEntry = new Label();
+            encoding = new Button();
+            journalEntry = new Button();
             navTitle = new Label();
             navigator.SuspendLayout();
             SuspendLayout();
@@ -60,6 +61,7 @@
             // navigator
             // 
             navigator.BackColor = Color.FromArgb(224, 224, 224);
+            navigator.Controls.Add(encoding);
             navigator.Controls.Add(journalEntry);
             navigator.Controls.Add(navTitle);
             navigator.Location = new Point(336, 12);
@@ -67,17 +69,35 @@
             navigator.Size = new Size(452, 426);
             navigator.TabIndex = 3;
             // 
+            // encoding
+            // 
+            encoding.BackColor = SystemColors.AppWorkspace;
+            encoding.FlatAppearance.BorderSize = 0;
+            encoding.FlatStyle = FlatStyle.Flat;
+            encoding.Location = new Point(340, 136);
+            encoding.Name = "encoding";
+            encoding.Size = new Size(96, 38);
+            encoding.TabIndex = 3;
+            encoding.Text = "تكوييد الحسابات العامة";
+            encoding.UseVisualStyleBackColor = false;
+            encoding.Click += encoding_Click;
+            encoding.MouseEnter += encoding_MouseEnter;
+            encoding.MouseLeave += encoding_MouseLeave;
+            // 
             // journalEntry
             // 
-            journalEntry.BackColor = SystemColors.ActiveBorder;
-            journalEntry.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 177);
-            journalEntry.Location = new Point(344, 69);
+            journalEntry.BackColor = SystemColors.AppWorkspace;
+            journalEntry.FlatAppearance.BorderSize = 0;
+            journalEntry.FlatStyle = FlatStyle.Flat;
+            journalEntry.Location = new Point(340, 76);
             journalEntry.Name = "journalEntry";
-            journalEntry.Size = new Size(93, 36);
-            journalEntry.TabIndex = 1;
+            journalEntry.Size = new Size(96, 38);
+            journalEntry.TabIndex = 2;
             journalEntry.Text = "قيد اليومية";
-            journalEntry.TextAlign = ContentAlignment.MiddleCenter;
+            journalEntry.UseVisualStyleBackColor = false;
             journalEntry.Click += journalEntry_Click;
+            journalEntry.MouseEnter += journalEntry_MouseEnter;
+            journalEntry.MouseLeave += journalEntry_MouseLeave;
             // 
             // navTitle
             // 
@@ -99,7 +119,6 @@
             Controls.Add(navigator);
             Controls.Add(label2);
             Controls.Add(label1);
-            MaximizeBox = false;
             Name = "mainWindow";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
@@ -113,7 +132,7 @@
         public Label label2;
         public Panel navigator;
         public Label navTitle;
-        public Label journalEntry;
-        
+        public Button journalEntry;
+        public Button encoding;
     }
 }

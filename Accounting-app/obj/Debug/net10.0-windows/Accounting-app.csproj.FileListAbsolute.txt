@@ -19,3 +19,4 @@ E:\Project\FOLDER\Accounting-app\Accounting-app\obj\Debug\net10.0-windows\Accoun
 E:\Project\FOLDER\Accounting-app\Accounting-app\obj\Debug\net10.0-windows\Accounting_app.Properties.Resources.resources
 E:\Project\FOLDER\Accounting-app\Accounting-app\obj\Debug\net10.0-windows\Accounting_app.mainWindow.resources
 E:\Project\FOLDER\Accounting-app\Accounting-app\obj\Debug\net10.0-windows\Accounting_app.Form2.resources
+E:\Project\FOLDER\Accounting-app\Accounting-app\obj\Debug\net10.0-windows\Accounting_app.Form3.resources
