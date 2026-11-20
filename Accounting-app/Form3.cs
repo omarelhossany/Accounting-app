@@ -20,7 +20,7 @@ namespace Accounting_app
             using var form = new Form
             {
                 Text = "add account",
-                Size = new Size(600, 500),
+                Size = new Size(600, 400),
                 StartPosition = FormStartPosition.CenterScreen
             };
 
