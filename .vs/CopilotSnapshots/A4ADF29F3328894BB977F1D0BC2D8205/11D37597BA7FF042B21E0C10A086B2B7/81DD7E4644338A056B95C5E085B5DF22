@@ -1,0 +1,65 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Media;
+using System.Text;
+using System.Windows.Forms;
+
+namespace Accounting_app
+{
+    public partial class Form3 : Form
+    {
+        public Form3()
+        {
+            InitializeComponent();
+        }
+
+        private void add_account_Click(object sender, EventArgs e)
+        {
+            if (account_name.Text != "")
+            {
+                if (!treeView1.SelectedNode.Nodes.Cast<TreeNode>().Any(n => n.Text == account_name.Text))
+                {
+                    DialogResult result = MessageBox.Show(
+                         "هل تود تأكيد إضافة هذا الحساب إلى الشجرة؟\n" + account_name.Text,
+                        "إضافة الحساب",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Information
+                    );
+                    if (result == DialogResult.Yes)
+                    {
+                        treeView1.SelectedNode.Expand();
+                        treeView1.SelectedNode.Nodes.Add(account_name.Text);
+                        return;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("هذا الحساب موجود", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "هل تود حذف هذا الحساب؟\n" + account_name.Text,
+                "حذف الحساب",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+            if (result == DialogResult.Yes)
+            {
+                treeView1.SelectedNode.Remove();
+                return;
+            }
+        }
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            label2.Text = e.Node.Text;
+        }
+
+    }
+}
