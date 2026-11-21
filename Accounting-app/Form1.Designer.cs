@@ -66,7 +66,7 @@
             navigator.Controls.Add(navTitle);
             navigator.Location = new Point(336, 12);
             navigator.Name = "navigator";
-            navigator.Size = new Size(452, 426);
+            navigator.Size = new Size(452, 414);
             navigator.TabIndex = 3;
             // 
             // encoding
@@ -107,7 +107,6 @@
             navTitle.Name = "navTitle";
             navTitle.Size = new Size(147, 34);
             navTitle.TabIndex = 0;
-            navTitle.Text = "الشركة";
             navTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // mainWindow
@@ -128,11 +127,11 @@
 
         #endregion
 
-        public Label label1;
-        public Label label2;
-        public Panel navigator;
-        public Label navTitle;
-        public Button journalEntry;
-        public Button encoding;
+        private Label label1;
+        private  Label label2;
+        private Panel navigator;
+        private Button journalEntry;
+        private Button encoding;
+        private Label navTitle;
     }
 }

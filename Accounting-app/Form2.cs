@@ -14,5 +14,17 @@ namespace Accounting_app
         {
             InitializeComponent();
         }
+
+        private void new_entry_Click(object sender, EventArgs e)
+        {
+            using var form = new Form
+            {
+                Text = "add entry",
+                Size = new Size(600, 400),
+                StartPosition = FormStartPosition.CenterScreen
+            };
+
+            form.ShowDialog();
+        }
     }
 }
